@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Empleado</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="index.js"></script>
+</head>
+
+<body>
+    <div class="contenedor">
+        <form id="employee-form">
+            <h1>Formulario de Empleados</h1>
+            <label for="employee-code">Código de empleado:</label>
+            <input type="number" id="employee-code" name="employee-code" maxlength="3" min="1" max="999" required>
+
+            <label for="employee-name">Nombre del empleado:</label>
+            <input type="text" id="employee-name" name="employee-name" maxlength="30" required>
+
+            <label for="employee-type">Tipo de empleado:</label>
+            <select id="employee-type" name="employee-type" required>
+                <option value="">Seleccione una opción</option>
+                <option value="1">De planta</option>
+                <option value="0">A término definido</option>
+            </select>
+
+            <label for="employee-time">Tiempo en la institución (meses):</label>
+            <input type="number" id="employee-time" name="employee-time" min="1" max="600" required>
+
+            <button type="submit" onclick="validarFormulario()">Enviar</button>
+        </form>
+    </div>
+</body>
+
+</html>
